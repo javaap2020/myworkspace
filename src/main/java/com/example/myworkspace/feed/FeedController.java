@@ -7,6 +7,7 @@ import java.net.URLEncoder;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
@@ -80,14 +81,15 @@ public class FeedController {
 		// WHERE user_id IN ('...', '...', '...', .....)
 		// finByUserIdIn(List<String> userIds)
 
-		List<Feed> list = feedRepo.findAll(Sort.by("id").descending());
-		for (Feed feed : list) {
-			for (FeedFile file : feed.getFiles()) {
-				file.setDataUrl(apiConfig.getBasePath() + "/feed-files/" + file.getId());
-			}
-		}
+//		List<Feed> list = feedRepo.findAll(Sort.by("id").descending());
+//		for (Feed feed : list) {
+//			for (FeedFile file : feed.getFiles()) {
+//				file.setDataUrl(apiConfig.getBasePath() + "/feed-files/" + file.getId());
+//			}
+//		}
 
-		return list;
+		// return list;
+		return new ArrayList<Feed>();
 	}
 
 	// 1건 추가
