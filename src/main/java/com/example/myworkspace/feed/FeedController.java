@@ -88,7 +88,6 @@ public class FeedController {
 			}
 		}
 
-		// test
 		return list;
 //		return new ArrayList<Feed>();
 	}
