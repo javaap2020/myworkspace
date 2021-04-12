@@ -87,7 +87,7 @@ public class FeedController {
 				file.setDataUrl(apiConfig.getBasePath() + "/feed-files/" + file.getId());
 			}
 		}
-		// test
+
 		return list;
 //		return new ArrayList<Feed>();
 	}
