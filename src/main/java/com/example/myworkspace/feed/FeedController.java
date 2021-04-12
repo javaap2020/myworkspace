@@ -81,15 +81,15 @@ public class FeedController {
 		// WHERE user_id IN ('...', '...', '...', .....)
 		// finByUserIdIn(List<String> userIds)
 
-//		List<Feed> list = feedRepo.findAll(Sort.by("id").descending());
-//		for (Feed feed : list) {
-//			for (FeedFile file : feed.getFiles()) {
-//				file.setDataUrl(apiConfig.getBasePath() + "/feed-files/" + file.getId());
-//			}
-//		}
+		List<Feed> list = feedRepo.findAll(Sort.by("id").descending());
+		for (Feed feed : list) {
+			for (FeedFile file : feed.getFiles()) {
+				file.setDataUrl(apiConfig.getBasePath() + "/feed-files/" + file.getId());
+			}
+		}
 
-		// return list;
-		return new ArrayList<Feed>();
+		return list;
+//		return new ArrayList<Feed>();
 	}
 
 	// 1건 추가
